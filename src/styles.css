@@ -4,6 +4,8 @@
 @import "tailwindcss";
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 @import "tailwindcss/preflight";
+@use '@angular/material' as mat;
+
 
 
 
