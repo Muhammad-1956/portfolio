@@ -1,3 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import "tailwindcss/utilities";
 @import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@import "tailwindcss/preflight";
+
+
+
+*{
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,24 @@
+<section class="skills container mx-auto mt-8 text-center" id="contact">
+  <p class="dark:text-gray-400">{{'CONTACT.TITLE' | translate}}</p>
+  <h2 class="mb-5 text-2xl font-bold text-violet-300 dark:text-white">{{'CONTACT.SUBTITLE' | translate}}</h2>
+
+  <div class="mx-auto flex flex-col items-center justify-center gap-3 lg:gap-6 p-4 md:flex-row">
+    @for (method of contactMethods; track method) {
+    <div class="rounded-xl py-8 px-4 shadow-xl min-w-75 text-center lg:min-w-50 dark:bg-slate-800">
+      <i [class]="method.icon + ' text-2xl'"></i>
+      <h4 class="mt-2 font-bold">{{ method.title | translate}}</h4>
+      <small class="block text-gray-500">{{ method.value | translate}}</small>
+      <a
+        class="group mt-2 inline-flex items-center gap-1 text-violet-300 hover:text-violet-400 transition-colors dark:text-violet-400"
+        [href]="method.link"
+        target="_blank"
+      >
+        {{'CONTACT.ACTION' | translate}}
+        <span class="transition-transform duration-500 group-hover:translate-x-2">
+          <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </a>
+    </div>
+    }
+  </div>
+</section>

@@ -1,0 +1,73 @@
+<header class="shadow fixed top-0 w-full bg-white dark:bg-slate-900 dark:shadow-violet-500/50  z-10">
+  <div class="head container mx-auto flex items-center justify-between p-3 ">
+    <span class="font-bold text-violet-300 dark:text-violet-400">{{'HEADER.FIRSTNAME' | translate}}</span>
+    <div class="controls flex items-center gap-3">
+      <select
+        #langSelect
+        class="w-full rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm
+        font-bold focus:outline-none cursor-pointer dark:text-black"
+        (change)="switchLanguage(langSelect.value)"
+        >
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="de">German</option>
+        </select>
+        <button class="text-md p-1 w-5 cursor-pointer" (click)="toggleTheme()">
+          @if(theme() === 'dark'){
+            <i class="fa-solid fa-sun text-yellow-400"></i>
+          }@else{
+            <i class="fa-solid fa-moon"></i>
+          }
+        </button>
+    </div>
+  </div>
+  <nav>
+  <ul class="fixed bottom-5 md:bottom-6 left-1/2 flex w-62.5
+  -translate-x-1/2 transform justify-between rounded-3xl
+   bg-gray-200 dark:bg-slate-800 dark:backdrop-blur-2xl px-6 py-4.5 text-center z-10">
+    <li>
+      <a #homeLink tabindex="0"
+         class="rounded-full p-1.5 px-2.5 cursor-pointer
+                focus:outline-none focus:bg-linear-to-t
+                focus:from-purple-0 focus:to-violet-500 dark:focus:from-purple-0 dark:focus:to-violet-800"
+         (click)="scrollTo('intro')">
+        <i class="fa-solid fa-house-chimney"></i>
+      </a>
+    </li>
+    <li>
+      <a tabindex="0"
+         class="rounded-full p-1.5 px-2.5 cursor-pointer
+                focus:outline-none focus:bg-linear-to-t focus:from-purple-0 focus:to-violet-500 dark:focus:to-violet-800"
+         (click)="scrollTo('story')">
+        <i class="fa-solid fa-user"></i>
+      </a>
+    </li>
+    <li>
+      <a tabindex="0"
+         class="rounded-full p-1.5 px-2.5 cursor-pointer
+                focus:outline-none focus:bg-linear-to-t focus:from-purple-0 focus:to-violet-500 dark:focus:to-violet-800"
+         (click)="scrollTo('skills')">
+        <i class="fa-solid fa-book"></i>
+      </a>
+    </li>
+    <li>
+      <a tabindex="0"
+         class="rounded-full p-1.5 px-2.5 cursor-pointer
+                focus:outline-none focus:bg-linear-to-t focus:from-purple-0 focus:to-violet-500 dark:focus:to-violet-800"
+         (click)="scrollTo('projects')">
+        <i class="fa-solid fa-briefcase"></i>
+      </a>
+    </li>
+    <li>
+      <a tabindex="0"
+         class="rounded-full p-1.5 px-2.5 cursor-pointer
+                focus:outline-none focus:bg-linear-to-t focus:from-purple-0 focus:to-violet-500 dark:focus:to-violet-800"
+         (click)="scrollTo('contact')">
+        <i class="fa-solid fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+
+</header>

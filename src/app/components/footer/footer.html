@@ -1,0 +1,28 @@
+<footer class="mt-8 text-center bg-violet-400 pb-20 pt-2.5 dark:text-black" id="footer">
+  <div class="container mx-auto flex flex-col gap-4 p-4">
+    <h2 class="text-2xl font-bold">{{'HEADER.FIRSTNAME' | translate}}</h2>
+    <ul class="links flex justify-center gap-6">
+      <li class="cursor-pointer" (click)="scrollTo('story')">
+        <a>{{'NAV.ABOUT' | translate}}</a>
+      </li>
+      <li class="cursor-pointer" (click)="scrollTo('projects')">
+        <a>{{'NAV.PROJECTS' | translate}}</a>
+      </li>
+      <li class="cursor-pointer" (click)="scrollTo('contact')">
+        <a>{{'NAV.CONTACT' | translate}}</a>
+      </li>
+    </ul>
+    <ul class="media flex justify-center gap-8">
+    <li class="cursor-pointer pb-0 hover:-translate-y-2.5 transition-all duration-400">
+      <a tabindex="0"><i class="fa-brands fa-facebook text-2xl"></i></a>
+    </li>
+    <li class="cursor-pointer pb-0 hover:-translate-y-2.5 transition-all duration-400">
+      <a tabindex="0"><i class="fa-brands fa-square-instagram text-2xl"></i></a>
+    </li>
+    <li class="cursor-pointer pb-0 hover:-translate-y-2.5 transition-all duration-400">
+      <a tabindex="0"><i class="fa-brands fa-x-twitter text-2xl"></i></a>
+    </li>
+  </ul>
+    <p> {{'FOOTER.CREATED_BY' | translate}} <span class="font-bold">{{'HEADER.NAME' | translate}}</span></p>
+  </div>
+</footer>

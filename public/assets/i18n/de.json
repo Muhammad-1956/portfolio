@@ -1,0 +1,62 @@
+{
+  "HEADER": {
+    "GREETING": "Hallo, ich bin",
+    "FIRSTNAME": "Mohamed",
+    "NAME": "Mohamed Fouad",
+    "ROLE": "Frontend-Entwickler",
+    "DOWNLOAD_CV": "Lebenslauf herunterladen"
+  },
+  "ABOUT": {
+    "TITLE": "Über mich",
+    "INTRO": "Meine Einführung",
+    "DESCRIPTION": "Hallo, mein Name ist Mohamed Fouad und ich komme aus Ägypten. Ich bin 24 Jahre alt. Ich habe einen Bachelorabschluss in Informatik mit Schwerpunkt Medizinische Informatik von der Helwan-Universität (2019–2023). Aufgrund meiner großen Leidenschaft für das Programmieren bin ich sehr begeistert von der Webentwicklung. Ich begann 2022 mit dem Erlernen der Webprogrammierung und startete mit HTML und CSS mit umfangreicher praktischer Erfahrung. Danach wechselte ich zu JavaScript, wobei ich viel Freude daran hatte, zahlreiche Probleme zu lösen und interaktive Funktionen zu entwickeln. Um professioneller zu werden, habe ich Angular über den Kurs von Maximilian Schwarzmüller gelernt. Auf diesem Weg habe ich wertvolles Wissen und praktische Erfahrung gesammelt, die es mir ermöglichen, moderne und responsive Benutzeroberflächen zu entwickeln. Außerdem lerne ich kontinuierlich weiter und verbessere ständig meine Fähigkeiten."
+  },
+  "ABILITIES": {
+    "TITLE": "Meine Fähigkeiten",
+    "SKILLS": "Meine Kenntnisse"
+  },
+  "PORTFOLIO": {
+    "TITLE": "Mein Portfolio",
+    "SUBTITLE": "Meine letzten Arbeiten",
+    "FILTERS": {
+      "ALL": "Alle",
+      "WEBSITE": "Webseite",
+      "HTML_CSS": "HTML & CSS",
+      "JAVASCRIPT": "JavaScript"
+    },
+    "PROJECTS": {
+      "LIVE": "Demo"
+    },
+    "PAGINATOR": {
+      "NEXT": "Weiter",
+      "PREVIOUS": "Zurück"
+    }
+  },
+  "CONTACT": {
+    "TITLE": "Kontakt aufnehmen",
+    "SUBTITLE": "Kontaktiere mich",
+    "ACTION": "Schreib mir",
+    "EMAIL": {
+      "LABEL": "E-Mail",
+      "VALUE": "mohameddfouad.22@gmail.com",
+      "ACTION": "Schreib mir"
+    },
+    "WHATSAPP": {
+      "LABEL": "WhatsApp",
+      "VALUE": "011-2453-5373",
+      "ACTION": "Schreib mir"
+    },
+    "MESSENGER": {
+      "LABEL": "Messenger",
+      "VALUE": "Muhammad Fouad"
+    }
+  },
+  "FOOTER": {
+    "CREATED_BY": "Erstellt von"
+  },
+  "NAV": {
+    "ABOUT": "Über mich",
+    "PROJECTS": "Projekte",
+    "CONTACT": "Kontakt"
+  }
+}

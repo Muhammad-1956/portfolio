@@ -1,0 +1,196 @@
+<section class="projects container mx-auto mt-8 md:mt-15 text-center" id="projects">
+  <p class="dark:text-gray-400">{{'PORTFOLIO.TITLE' | translate}}</p>
+  <h2 class="mb-5 text-2xl font-bold text-violet-300 dark:text-white">{{'PORTFOLIO.SUBTITLE' | translate}}</h2>
+
+  <div class="categories flex justify-center font-bold gap-2 md:gap-5 text-sm lg:text-lg mx-2
+  md:mx-0 mb-2 md:mb-5
+  ">
+    <button
+    #all
+    (click)="setCategory('all')"
+      class="cursor-pointer rounded px-4 py-2 shadow focus:outline-none hover:bg-violet-300 hover:text-white focus:bg-violet-300 focus:text-white dark:bg-slate-800 dark:hover:bg-violet-400 dark:hover:text-black dark:focus:bg-violet-400 dark:focus:text-black"
+    >
+      {{'PORTFOLIO.FILTERS.ALL' | translate}}
+    </button>
+    <button
+    (click)="setCategory('website')"
+       class="cursor-pointer rounded px-4 py-2 shadow hover:bg-violet-300 hover:text-white focus:bg-violet-300 focus:text-white dark:bg-slate-800 dark:hover:bg-violet-400 dark:hover:text-black dark:focus:bg-violet-400 dark:focus:text-black"
+    >
+      {{'PORTFOLIO.FILTERS.WEBSITE' | translate}}
+    </button>
+    <button
+    (click)="setCategory('html&css')"
+       class="cursor-pointer rounded px-4 py-2 shadow hover:bg-violet-300 hover:text-white focus:bg-violet-300 focus:text-white dark:bg-slate-800 dark:hover:bg-violet-400 dark:hover:text-black dark:focus:bg-violet-400 dark:focus:text-black"
+    >
+     {{'PORTFOLIO.FILTERS.HTML_CSS' | translate}}
+    </button>
+    <button
+    (click)="setCategory('javascript')"
+       class="cursor-pointer rounded px-4 py-2 shadow hover:bg-violet-300 hover:text-white focus:bg-violet-300 focus:text-white dark:bg-slate-800 dark:hover:bg-violet-400 dark:hover:text-black dark:focus:bg-violet-400 dark:focus:text-black"
+    >
+      {{'PORTFOLIO.FILTERS.JAVASCRIPT' | translate}}
+    </button>
+  </div>
+  <div class="flex flex-wrap justify-center gap-4 mx-2 md:mx-0 ">
+  @for (project of paginatedProjects(); track project.title) {
+    <div
+      class="card rounded-xl p-4 shadow-xl transition-all duration-700
+             w-full sm:w-[45%] md:w-[40%] max-w-md dark:bg-slate-800"
+    >
+      <img class="w-full h-67.5 rounded" [src]="project.image" [alt]="project.alt" />
+
+      <h4 class="font-bold mt-2">
+        {{ project.title }}
+        <span class="block text-sm text-gray-500">
+          ({{ project.tech }})
+        </span>
+      </h4>
+
+      <a
+        class="group mt-2 inline-flex items-center gap-1 text-violet-300 hover:text-violet-400 dark:text-violet-400"
+        [href]="project.demoLink"
+        target="_blank"
+      >
+        {{'PORTFOLIO.PROJECTS.LIVE' | translate}}
+        <span class="transition-transform group-hover:translate-x-2">
+          <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </a>
+    </div>
+  }
+</div>
+<mat-paginator
+  class="mt-8 mat-paginator-dark"
+  [length]="filteredProjects().length"
+  [pageSize]="pageSize()"
+  showFirstLastButtons
+  (page)="onPageChange($event)">
+</mat-paginator>
+
+ </section>
+
+ <!--<section class="projects container mx-auto mt-8 md:mt-15 text-center" id="projects">
+  <p>My Portfolio</p>
+  <h2 class="mb-5 text-2xl font-bold text-violet-300">My Recent Work</h2>
+
+  <div class="categories flex justify-center font-bold gap-2 md:gap-5 text-sm lg:text-lg mx-2
+  md:mx-0 mb-2 md:mb-5
+  ">
+    <button
+    (click)="setCategory('all')"
+      class="cursor-pointer rounded px-4 py-2 shadow hover:bg-violet-300 hover:text-white focus:bg-violet-300 focus:text-white"
+    >
+      All
+    </button>
+    <button
+    (click)="setCategory('website')"
+      class="cursor-pointer rounded px-4 py-2 shadow hover:bg-violet-300 hover:text-white focus:bg-violet-300 focus:text-white"
+    >
+      Website
+    </button>
+    <button
+    (click)="setCategory('html&css')"
+      class="cursor-pointer rounded px-4 py-2 shadow hover:bg-violet-300 hover:text-white focus:bg-violet-300 focus:text-white"
+    >
+      HTML & CSS
+    </button>
+    <button
+    (click)="setCategory('javascript')"
+      class="cursor-pointer rounded px-4 py-2 shadow hover:bg-violet-300 hover:text-white focus:bg-violet-300 focus:text-white"
+    >
+      JAVASCRIPT
+    </button>
+  </div>
+  <div class="flex flex-wrap justify-center gap-4 mx-2 md:mx-0">
+  @for (project of filteredProjects(); track project.title) {
+    <div
+      class="card rounded-xl p-4 shadow-xl transition-all duration-1000 ease-in-out transform w-full sm:w-[45%] md:w-[40%] max-w-md"
+    >
+      <img
+        class="w-full rounded"
+        [src]="project.image"
+        [alt]="project.alt"
+      />
+
+      <h4 class="font-bold text-wrap mt-2">
+        {{ project.title }}
+        <span class="block text-sm text-gray-500 dark:text-gray-300">
+          ({{ project.tech }})
+        </span>
+      </h4>
+
+      <a
+        class="group mt-2 inline-flex items-center gap-1 text-sm md:text-md text-violet-300 hover:text-violet-400 transition-colors"
+        [href]="project.demoLink"
+        target="_blank"
+      >
+        Demo
+        <span class="transition-transform duration-500 group-hover:translate-x-2">
+          <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </a>
+    </div>
+  }
+</div>
+ <div
+    class="flex flex-wrap items-center justify-around w-[700px] mx-auto text-start gap-2 md:gap-4 p-4 mt-4 md:mt-5"
+  >
+    <div class="card rounded-xl p-2 shadow-xl w-[300px]">
+      <img
+        class="w-full rounded"
+        src="https://media.istockphoto.com/id/1403985176/photo/web-development-for-ui-ux-design-concept-illustration-landing-page-template-business-idea.jpg?s=1024x1024&w=is&k=20&c=1SI_aKShNC6F4HdKDSpJaiolGjLmfa2O6Kl4it-CwXw="
+        alt="Website Picture"
+        tooltip="Wesbite Picture"
+      />
+      <h4 class="font-bold text-wrap w-62.5">Shop Easy Ecommerce (Angular - bootstrap)</h4>
+      <a
+        class="group text-sm md:text-md mt-2 inline-flex items-center gap-1 text-violet-300 hover:text-violet-400 transition-colors"
+        [href]=""
+        target="_blank"
+      >
+        Demo
+        <span class="transition-transform duration-500 group-hover:translate-x-2">
+          <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </a>
+    </div>
+    <div class="card rounded-xl p-2 shadow-xl w-[300px]">
+      <img
+        class="w-full rounded"
+        src="https://media.istockphoto.com/id/1403985176/photo/web-development-for-ui-ux-design-concept-illustration-landing-page-template-business-idea.jpg?s=1024x1024&w=is&k=20&c=1SI_aKShNC6F4HdKDSpJaiolGjLmfa2O6Kl4it-CwXw="
+        alt="Website Picture"
+        tooltip="Wesbite Picture"
+      />
+      <h4 class="font-bold text-wrap w-62.5">Shop Easy Ecommerce (Angular - bootstrap)</h4>
+      <a
+        class="group text-sm md:text-md mt-2 inline-flex items-center gap-1 text-violet-300 hover:text-violet-400 transition-colors"
+        [href]=""
+        target="_blank"
+      >
+        Demo
+        <span class="transition-transform duration-500 group-hover:translate-x-2">
+          <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </a>
+    </div>
+    <div class="card rounded-xl p-2 shadow-xl w-[300px]">
+      <img
+        class="w-full rounded"
+        src="https://media.istockphoto.com/id/1403985176/photo/web-development-for-ui-ux-design-concept-illustration-landing-page-template-business-idea.jpg?s=1024x1024&w=is&k=20&c=1SI_aKShNC6F4HdKDSpJaiolGjLmfa2O6Kl4it-CwXw="
+        alt="Website Picture"
+        tooltip="Wesbite Picture"
+      />
+      <h4 class="font-bold text-wrap w-62.5">Shop Easy Ecommerce (Angular - bootstrap)</h4>
+      <a
+        class="group text-sm md:text-md mt-2 inline-flex items-center gap-1 text-violet-300 hover:text-violet-400 transition-colors"
+        [href]=""
+        target="_blank"
+      >
+        Demo
+        <span class="transition-transform duration-500 group-hover:translate-x-2">
+          <i class="fa-solid fa-arrow-right"></i>
+        </span>
+      </a>
+    </div>
+  </div>
+ </section>-->

@@ -1,0 +1,71 @@
+<section class="skills container mx-auto mt-8 lg:mt-30 text-center" id="skills">
+  <p class="dark:text-gray-400">{{'ABILITIES.TITLE' | translate}}</p>
+  <h2 class="mb-5 text-2xl font-bold text-violet-300 dark:text-white">{{'ABILITIES.SKILLS' | translate}}</h2>
+  <div class="flex flex-col gap-2 items-center rounded-xl md:mx-auto md:w-125 md:p-5 p-2 mx-3 shadow-xl text-start dark:bg-slate-800">
+    <p class="text-violet-300 dark:text-violet-400 ">{{'HEADER.ROLE' | translate}}</p>
+
+      @for(skill of skills; track skill){
+        <div class="skill flex justify-between w-full">
+      <div class=" p-2 flex gap-2">
+        <span><i class="fa-solid fa-circle-check text-violet-300"></i></span>
+        <p class="relative after:block after:content-['{{skill.level2}}'] after:text-xs lg:after:text-sm after:mt-2">{{skill.name1}}</p>
+      </div>
+      <div class=" p-2 flex gap-2">
+        <span><i class="fa-solid fa-circle-check text-violet-300"></i></span>
+        <p class="relative after:block after:content-['{{skill.level2}}'] after:text-xs lg:after:text-sm after:mt-2 min-w-25">{{skill.name2}}</p>
+      </div>
+    </div>
+      }
+  </div>
+</section>
+
+<!-- <div class="skill flex justify-between w-full">
+      <div class=" p-2 flex gap-2">
+        <span><i class="fa-solid fa-circle-check"></i></span>
+        <p class="relative after:block after:content-['Advanced'] after:text-xs lg:after:text-sm after:mt-2">Angular</p>
+      </div>
+      <div class=" p-2 flex gap-2">
+        <span><i class="fa-solid fa-circle-check"></i></span>
+        <p class="relative after:block after:content-['Advanced'] after:text-xs lg:after:text-sm after:mt-2 min-w-25">Firebase</p>
+      </div>
+    </div>
+    <div class="skill flex justify-between w-full">
+      <div class=" p-2 flex gap-2">
+        <span><i class="fa-solid fa-circle-check"></i></span>
+        <p class="relative after:block after:content-['Advanced'] after:text-xs lg:after:text-sm after:mt-2">HTML</p>
+      </div>
+      <div class=" p-2 flex gap-2">
+        <span><i class="fa-solid fa-circle-check"></i></span>
+        <p class="relative after:block after:content-['Advanced'] after:text-xs lg:after:text-sm after:mt-2 min-w-25">CSS</p>
+      </div>
+    </div>
+    <div class="skill flex justify-between w-full">
+      <div class=" p-2 flex gap-2">
+        <span><i class="fa-solid fa-circle-check"></i></span>
+        <p class="relative after:block after:content-['Advanced'] after:text-xs lg:after:text-sm after:mt-2">JAVASCRIPT</p>
+      </div>
+      <div class=" p-2 flex gap-2">
+        <span><i class="fa-solid fa-circle-check"></i></span>
+        <p class="relative after:block after:content-['Advanced'] after:text-xs lg:after:text-sm after:mt-2 min-w-25">TYPESCRIPT</p>
+      </div>
+    </div>
+    <div class="skill flex justify-between w-full">
+      <div class=" p-2 flex gap-2">
+        <span><i class="fa-solid fa-circle-check"></i></span>
+        <p class="relative after:block after:content-['Advanced'] after:text-xs lg:after:text-sm after:mt-2">BOOTSTRAP</p>
+      </div>
+      <div class=" p-2 flex gap-2">
+        <span><i class="fa-solid fa-circle-check"></i></span>
+        <p class="relative after:block after:content-['Advanced'] after:text-xs lg:after:text-sm after:mt-2 min-w-25">SCSS</p>
+      </div>
+    </div>
+    <div class="skill flex justify-between w-full">
+      <div class=" p-2 flex gap-2">
+        <span><i class="fa-solid fa-circle-check"></i></span>
+        <p class="relative after:block after:content-['Advanced'] after:text-xs lg:after:text-sm after:mt-2">TAILWIND</p>
+      </div>
+      <div class=" p-2 flex gap-2">
+        <span><i class="fa-solid fa-circle-check"></i></span>
+        <p class="relative after:block after:content-['Advanced'] after:text-xs lg:after:text-sm after:mt-2 min-w-25">GIT</p>
+      </div>
+    </div> -->
