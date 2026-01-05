@@ -8,5 +8,11 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './skills.css',
 })
 export class Skills {
-  skills = skills
+  skills = [
+  { name1: "Angular", level1: "Advanced", name2: "Firebase", level2: "Advanced" },
+  { name1: "HTML", level1: "Advanced", name2: "CSS", level2: "Advanced" },
+  { name1: "JAVASCRIPT", level1: "Advanced", name2: "TYPESCRIPT", level2: "Advanced" },
+  { name1: "BOOTSTRAP", level1: "Advanced", name2: "SASS", level2: "Advanced" },
+  { name1: "TAILWIND", level1: "Advanced", name2: "GIT", level2: "Advanced" }
+];
 }
