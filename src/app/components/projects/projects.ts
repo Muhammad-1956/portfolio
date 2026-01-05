@@ -1,7 +1,7 @@
 import { Component, computed, ElementRef, signal, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatPaginatorModule, PageEvent, MatPaginatorIntl } from '@angular/material/paginator';
-import { projects } from '../../../../backend/server';
+import { projects } from '../../../backend/server';
 import { TranslateModule } from '@ngx-translate/core';
 import { ProjectsPaginatorIntl } from '../../core/services/services/paginator.service';
 
