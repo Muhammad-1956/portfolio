@@ -10,7 +10,7 @@
         >
           <option value="en">English</option>
           <option value="ar">Arabic</option>
-          <option value="de">German</option>
+          <!-- <option value="de">German</option> -->
         </select>
         <button class="text-md p-1 w-5 cursor-pointer" (click)="toggleTheme()">
           @if(theme() === 'dark'){
@@ -30,7 +30,7 @@
          class="rounded-full p-1.5 px-2.5 cursor-pointer
                 focus:outline-none focus:bg-linear-to-t
                 focus:from-purple-0 focus:to-violet-500 dark:focus:from-purple-0 dark:focus:to-violet-800"
-         (click)="scrollTo('intro')">
+         (click)="scrollToSection('intro')">
         <i class="fa-solid fa-house-chimney"></i>
       </a>
     </li>
@@ -38,7 +38,7 @@
       <a tabindex="0"
          class="rounded-full p-1.5 px-2.5 cursor-pointer
                 focus:outline-none focus:bg-linear-to-t focus:from-purple-0 focus:to-violet-500 dark:focus:to-violet-800"
-         (click)="scrollTo('story')">
+         (click)="scrollToSection('story')">
         <i class="fa-solid fa-user"></i>
       </a>
     </li>
@@ -46,7 +46,7 @@
       <a tabindex="0"
          class="rounded-full p-1.5 px-2.5 cursor-pointer
                 focus:outline-none focus:bg-linear-to-t focus:from-purple-0 focus:to-violet-500 dark:focus:to-violet-800"
-         (click)="scrollTo('skills')">
+         (click)="scrollToSection('skills')">
         <i class="fa-solid fa-book"></i>
       </a>
     </li>
@@ -54,7 +54,7 @@
       <a tabindex="0"
          class="rounded-full p-1.5 px-2.5 cursor-pointer
                 focus:outline-none focus:bg-linear-to-t focus:from-purple-0 focus:to-violet-500 dark:focus:to-violet-800"
-         (click)="scrollTo('projects')">
+         (click)="scrollToSection('projects')">
         <i class="fa-solid fa-briefcase"></i>
       </a>
     </li>
@@ -62,7 +62,7 @@
       <a tabindex="0"
          class="rounded-full p-1.5 px-2.5 cursor-pointer
                 focus:outline-none focus:bg-linear-to-t focus:from-purple-0 focus:to-violet-500 dark:focus:to-violet-800"
-         (click)="scrollTo('contact')">
+         (click)="scrollToSection('contact')">
         <i class="fa-solid fa-envelope"></i>
       </a>
     </li>

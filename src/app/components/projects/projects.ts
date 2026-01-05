@@ -24,6 +24,15 @@ export class Projects {
 
   projects = signal([
   {
+    title: 'Foodify Website',
+    tech: 'Angular',
+    category: 'website',
+    image: 'assets/foodify.png',
+    alt: 'Shop Easy Website',
+    tooltip: 'Shop Easy Website',
+    demoLink: 'https://foodify-omega-red.vercel.app/auth'
+  },
+  {
     title: 'Shop Easy Full Stack Ecommerce',
     tech: 'Angular - Firebase',
     category: 'website',

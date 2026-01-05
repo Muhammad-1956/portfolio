@@ -1,12 +1,4 @@
-import { ViewportScroller } from '@angular/common';
-import {
-  Component,
-  ElementRef,
-  signal,
-  ViewChild,
-  AfterViewInit,
-  OnInit,
-} from '@angular/core';
+import { Component, signal, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -15,16 +7,10 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
-export class Navbar implements OnInit, AfterViewInit {
-  @ViewChild('homeLink')
-  homeLink!: ElementRef<HTMLAnchorElement>;
-
+export class Navbar implements OnInit {
   theme = signal<'dark' | 'light'>('light');
-
-  constructor(
-    private viewportScroller: ViewportScroller,
-    public translate: TranslateService
-  ) {
+  @ViewChild('homeLink') homeLink!: ElementRef<HTMLAnchorElement>;
+  constructor(public translate: TranslateService) {
     this.translate.setDefaultLang('en');
   }
 
@@ -53,13 +39,12 @@ export class Navbar implements OnInit, AfterViewInit {
     this.translate.use(lang);
   }
 
-  scrollTo(sectionId: string) {
+  scrollToSection(sectionId: string) {
     const el = document.getElementById(sectionId);
     if (!el) return;
 
     const yOffset = -80;
-    const y =
-      el.getBoundingClientRect().top + window.scrollY + yOffset;
+    const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
 
     window.scrollTo({
       top: y,

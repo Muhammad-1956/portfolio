@@ -34,17 +34,12 @@ export const appConfig: ApplicationConfig = {
 
     importProvidersFrom(
       TranslateModule.forRoot({
-        defaultLanguage: 'en',
-        loader: {
-          provide: TranslateLoader,
-          useClass: TranslateHttpLoader,
-          deps: [HttpClient]
-        }
-      })
+      fallbackLang: 'en'
+    })
     ),
       ...((TranslateModule.forRoot({
       loader: { provide: TranslateLoader, useClass: TranslateHttpLoader },
-      defaultLanguage: 'en'
+      fallbackLang: 'en'
     }).providers) ?? []),
     // Provide the loader config
     { provide: TRANSLATE_HTTP_LOADER_CONFIG, useValue: translateLoaderConfig }

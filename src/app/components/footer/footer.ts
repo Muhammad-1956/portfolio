@@ -10,7 +10,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class Footer {
    constructor(private viewportScroller: ViewportScroller,public translate: TranslateService){
-    translate.setDefaultLang('en');
+
   }
   scrollTo(sectionId: string) {
   const el = document.getElementById(sectionId);
