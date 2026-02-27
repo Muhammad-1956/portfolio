@@ -93,7 +93,7 @@ export class Projects {
     image: 'assets/x-clone.png',
     alt: 'X Clone Landing Page',
     tooltip: 'X Clone Landing Page',
-    demoLink: 'file:///E:/Tailwind_projects/x_clone/index.html'
+    demoLink: 'https://muhammad-1956.github.io/x-clone/'
   },
   {
     title: 'Homyz Landing Page',
