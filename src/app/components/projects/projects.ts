@@ -57,7 +57,7 @@ export class Projects {
     image: 'assets/dental.png',
     alt: 'Dental Landing Page',
     tooltip: 'Dental Landing Page',
-    demoLink: ''
+    demoLink: 'https://muhammad-1956.github.io/dentist-landing-page/html/health.html#'
   },
   {
     title: 'Ratesland Landing Page',
@@ -66,7 +66,7 @@ export class Projects {
     image: 'assets/ratesland.png',
     alt: 'Ratesland Landing Page',
     tooltip: 'Ratesland Landing Page',
-    demoLink: ''
+    demoLink: 'https://muhammad-1956.github.io/ratesland-IV/ratesland-III.html'
   },
   {
     title: 'Quote Generator App',
@@ -93,7 +93,7 @@ export class Projects {
     image: 'assets/x-clone.png',
     alt: 'X Clone Landing Page',
     tooltip: 'X Clone Landing Page',
-    demoLink: ''
+    demoLink: 'file:///E:/Tailwind_projects/x_clone/index.html'
   },
   {
     title: 'Homyz Landing Page',
